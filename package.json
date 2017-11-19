@@ -1,5 +1,6 @@
 {
-  "name": "react-tv-netflix-list",
+  "name": "react-tv-horizontal-list",
+  "description": "Netflix based Horizontal List using ReactTV",
   "version": "1.0.0",
   "author": "Raphael Amorim",
   "main": "bundle.js",
