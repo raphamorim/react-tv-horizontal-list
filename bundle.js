@@ -46,6 +46,10 @@
 
 	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
@@ -66,25 +70,29 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var App = function (_React$Component) {
-	  _inherits(App, _React$Component);
+	var HorizontalList = function (_React$Component) {
+	  _inherits(HorizontalList, _React$Component);
 
-	  function App() {
-	    _classCallCheck(this, App);
+	  function HorizontalList() {
+	    _classCallCheck(this, HorizontalList);
 
-	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (HorizontalList.__proto__ || Object.getPrototypeOf(HorizontalList)).apply(this, arguments));
 	  }
 
-	  _createClass(App, [{
+	  _createClass(HorizontalList, [{
 	    key: 'render',
 	    value: function render() {
+	      var _props = this.props,
+	          title = _props.title,
+	          data = _props.data;
+
 	      return _react2.default.createElement(
 	        'div',
 	        { 'class': 'contain' },
 	        _react2.default.createElement(
 	          'h1',
 	          null,
-	          'Animes'
+	          title
 	        ),
 	        _react2.default.createElement(
 	          'div',
@@ -92,28 +100,14 @@
 	          _react2.default.createElement(
 	            'div',
 	            { 'class': 'row__inner' },
-	            List(_data.animes)
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Movies'
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { 'class': 'row' },
-	          _react2.default.createElement(
-	            'div',
-	            { 'class': 'row__inner' },
-	            List(_data.movies)
+	            List(data)
 	          )
 	        )
 	      );
 	    }
 	  }]);
 
-	  return App;
+	  return HorizontalList;
 	}(_react2.default.Component);
 
 	function List(source) {
@@ -121,7 +115,7 @@
 	  source.forEach(function (item) {
 	    var tile = _react2.default.createElement(
 	      'div',
-	      { 'class': 'tile' },
+	      { 'class': 'tile', tabindex: '0' },
 	      _react2.default.createElement(
 	        'div',
 	        { 'class': 'tile__media' },
@@ -141,7 +135,7 @@
 	  return list;
 	}
 
-	_reactTv2.default.render(_react2.default.createElement(App, null), document.querySelector('#root'));
+	exports.default = HorizontalList;
 
 /***/ }),
 /* 1 */

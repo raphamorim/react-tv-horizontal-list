@@ -6,7 +6,7 @@ Netflix based Horizontal List using ReactTV.
 yarn add react-tv-horizontal-list
 ```
 
-```
+```jsx
 import React from 'react'
 import ReactTV from 'react-tv'
 import { HorizontalList } from 'react-tv-horizontal-list'
@@ -16,7 +16,7 @@ const data = [{
   thumbUrl: 'http://path-to-some/image.png'
 }]
 
-React.TV.render(
+ReactTV.render(
   <HorizontalList data={data} title={'Movies'}/>, document.querySelector('#root')
 )
 ```

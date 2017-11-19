@@ -4,18 +4,13 @@ import { animes, movies } from './data'
 
 class HorizontalList extends React.Component {
   render() {
+    const { title, data } = this.props
     return (
       <div class="contain">
-        <h1>Animes</h1>
+        <h1>{title}</h1>
         <div class="row">
           <div class="row__inner">
-            {List(animes)}
-          </div>
-        </div>
-        <h1>Movies</h1>
-        <div class="row">
-          <div class="row__inner">
-            {List(movies)}
+            {List(data)}
           </div>
         </div>
       </div>
@@ -53,5 +48,3 @@ function List(source) {
 }
 
 export default HorizontalList
-
-ReactTV.render(<HorizontalList/>, document.querySelector('#root'))
