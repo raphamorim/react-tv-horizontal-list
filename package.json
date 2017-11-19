@@ -1,7 +1,8 @@
 {
-  "name": "benchmark-react-tv",
+  "name": "react-tv-netflix-list",
   "version": "1.0.0",
   "author": "Raphael Amorim",
+  "main": "bundle.js",
   "license": "MIT",
   "react-tv": {
     "files": [

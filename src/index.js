@@ -2,7 +2,7 @@ import React from 'react'
 import ReactTV from 'react-tv'
 import { animes, movies } from './data'
 
-class App extends React.Component {
+class HorizontalList extends React.Component {
   render() {
     return (
       <div class="contain">
@@ -27,7 +27,7 @@ function List(source) {
   let list = []
   source.forEach((item) => {
     const tile = (
-      <div class="tile">
+      <div class="tile" tabindex="0">
         <div class="tile__media">
           {
             (item.thumbUrl)
@@ -52,4 +52,6 @@ function List(source) {
   return list
 }
 
-ReactTV.render(<App/>, document.querySelector('#root'))
+export default HorizontalList
+
+ReactTV.render(<HorizontalList/>, document.querySelector('#root'))
