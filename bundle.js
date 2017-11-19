@@ -137,6 +137,14 @@
 
 	exports.default = HorizontalList;
 
+
+	_reactTv2.default.render(_react2.default.createElement(
+	  'div',
+	  { 'class': 'test-app' },
+	  _react2.default.createElement(HorizontalList, { title: 'Animes', data: _data.animes }),
+	  _react2.default.createElement(HorizontalList, { title: 'Movies', data: _data.movies })
+	), document.querySelector('#root'));
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {

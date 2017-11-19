@@ -48,3 +48,11 @@ function List(source) {
 }
 
 export default HorizontalList
+
+ReactTV.render(
+  <div class='test-app'>
+    <HorizontalList title='Animes' data={animes} />
+    <HorizontalList title='Movies' data={movies} />
+  </div>,
+  document.querySelector('#root')
+)
